@@ -4,15 +4,15 @@ name: Run Basic Testes
 # em que momento será executada 
 on:
   pull_request:
-    braches: [master]
+    branches: [master]
 
-jobs: 
+jobs:   
   # o que vai ser feito nessa pipeline
   # só teremos um job: rodar testes 
 
   cypress-run:
 #maquina que será executado
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
 
 # passo a passo para rodar os testes
     steps:
@@ -28,5 +28,6 @@ jobs:
         with: 
           record: true
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }} 
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
 
