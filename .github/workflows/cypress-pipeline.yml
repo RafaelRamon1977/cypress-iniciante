@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v7
     # exemplo de execução no terminal
       - name: instalar dependencias do projeto
-        run: echo Eduardo Finotti
+        run: npm install
     # execução e config do projeto  
       - name: Run Testes
         uses: cypress-io/github-action@v7
